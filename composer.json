@@ -1,0 +1,17 @@
+{
+	"description": "The CodeIgniter X Deployer",
+	"name": "afriex/ci_deployer",
+	"type": "project",
+	"authors": [
+        {
+            "name": "Afri Suryadi",
+            "email": "afriesur@gmail.com",
+            "role": "BE Developer"
+        }
+    ],
+	"require": {
+		"php": ">=7.0.0",
+		"vlucas/phpdotenv": "^3.6",
+		"deployer/deployer": "^6.7"
+	}
+}

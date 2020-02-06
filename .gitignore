@@ -1,0 +1,9 @@
+#default
+.DS_store
+.env
+composer.lock
+deploy.php
+
+#folder
+vendor/*
+application/cache/*
