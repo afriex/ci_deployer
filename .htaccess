@@ -1,22 +1,14 @@
-
-options -Indexes
-
-#hide a Specifuc File
-
-<Files .env>
-order allow,deny
-Deny from all
-</Files>
-
 <IfModule mod_rewrite.c>
 
 	RewriteEngine On
 
+	## protect .env & .git folder ##
+	RedirectMatch 403 /\.git
+	RedirectMatch 403 /\.env
+	
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
-
-	RewriteCond $1 !^(index\.php|image|img|css|js|blog|JPG|robots\.txt)
-	RewriteRule (.*) index.php?/$1 [L]
+	RewriteRule ^(.*)$ index.php/$1 [L]
 
 </IfModule>
 
